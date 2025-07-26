@@ -35,7 +35,7 @@
 }
 
 .experience-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-25px);
 }
 
 .experience-header {

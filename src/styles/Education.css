@@ -9,6 +9,8 @@
   font-size: 0.9rem;
 }
 
+
+
 .education-heading {
    text-align: center;
   font-size: 2.5rem;
@@ -32,6 +34,8 @@
   justify-content: center;
   gap: 30px;
 }
+
+
 
 .full-card {
   flex: 1 1 600px;
@@ -93,7 +97,7 @@
 
 .label {
   font-weight: 600;
-  color: #ffffff;
+  color: #f49696;
 }
 
 .education-text ul {

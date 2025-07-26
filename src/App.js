@@ -9,6 +9,7 @@ import Certification from "./components/Certification";
 import Experience from "./components/Experience";
 import About from "./components/About";
 import Education from "./components/Education";
+import Skill from "./components/Skill";
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
       {/* <section id="about">
         <About />
       </section> */}
+
+      <section id="skill">
+        <Skill />
+      </section>
 
       <section id="edu">
         <Education />

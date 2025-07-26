@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faMapMarkerAlt,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import "../styles/Footer.css";
 import avatar1 from "../assets/about/linkedinn.PNG";
 import avatar2 from "../assets/about/github.PNG";
@@ -10,86 +14,86 @@ import avatar5 from "../assets/about/leetcode.PNG";
 import avatar6 from "../assets/about/hakerrank.PNG";
 
 const Footer = () => {
-  const [time, setTime] = useState("");
-  const [date, setDate] = useState("");
-  const [day, setDay] = useState("");
+  const [clock, setClock] = useState({
+    day: "",
+    date: "",
+    time: "",
+  });
 
   useEffect(() => {
-    const updateTime = () => {
+    const updateClock = () => {
       const now = new Date();
-      const options = { weekday: "long" };
-      const currentDay = new Intl.DateTimeFormat("en-US", options).format(now);
-      const currentDate = now.toLocaleDateString("en-GB");
-      const currentTime = now.toLocaleTimeString("en-GB", {
-        hour12: false,
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-      });
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      const day = days[now.getDay()];
+      const date = now.toLocaleDateString();
 
-      setDay(currentDay);
-      setDate(currentDate);
-      setTime(currentTime);
+      const hours = now.getHours() % 12 || 12;
+      const minutes = now.getMinutes().toString().padStart(2, "0");
+      const seconds = now.getSeconds().toString().padStart(2, "0");
+      const ampm = now.getHours() >= 12 ? "PM" : "AM";
+
+      const time = `${hours}:${minutes}:${seconds} ${ampm}`;
+      setClock({ day, date, time });
     };
 
-    updateTime();
-    const interval = setInterval(updateTime, 1000);
+    updateClock();
+    const interval = setInterval(updateClock, 1000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <footer className="footer">
-      <div className="footer-container">
-        {/* Left: Date & Time */}
-        <div className="footer-left">
-          <div className="footer-info">
-            <div className="footer-title">{day}</div>
-            <div className="footer-title">{date}</div>
-            <div className="footer-time">{time}</div>
+      <div className="footer__top">
+        <div className="footer__contact">
+          <h3>Contact me</h3>
+          <p>
+            <FontAwesomeIcon icon={faPhone} /> +91 - 7878XX2922
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faEnvelope} /> rajatnagar7893@gmail.com
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faMapMarkerAlt} /> Gurugram, Haryana, IN
+          </p>
+
+          <div className="footer__avatars">
+            <img src={avatar1} alt="LinkedIn" />
+            <img src={avatar2} alt="GitHub" />
+            <img src={avatar3} alt="Twitter" />
+            <img src={avatar4} alt="Instagram" />
+            <img src={avatar5} alt="LeetCode" />
+            <img src={avatar6} alt="HackerRank" />
           </div>
         </div>
 
-        {/* Right: Contact */}
-        <div className="footer-right">
-          <div className="footer-column">
-            <h4>Contact Information</h4>
-            <p><FontAwesomeIcon icon={faPhone} /> +91 - 7878XX2922</p>
-            <p>
-              <FontAwesomeIcon icon={faEnvelope} />
-              <a href="mailto:rajatnagar7893@gmail.com" className="footer-email">
-                rajatnagar7893@gmail.com
-              </a>
-            </p>
-            <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Gurugram, Haryana, IN</p>
-          </div>
+        <div className="footer__form">
+          <h3>Send Feedback</h3>
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="Your Email" />
+          <textarea rows="4" placeholder="Your Feedback" />
+          <button type="submit">Send</button>
         </div>
       </div>
 
-      {/* Centered Avatars */}
-      <div className="avatars">
-        <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-          <img src={avatar1} alt="LinkedIn" />
-        </a>
-        <a href="https://github.com" target="_blank" rel="noreferrer">
-          <img src={avatar2} alt="GitHub" />
-        </a>
-        <a href="https://twitter.com" target="_blank" rel="noreferrer">
-          <img src={avatar3} alt="X Twitter" />
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer">
-          <img src={avatar4} alt="Instagram" />
-        </a>
-        <a href="https://leetcode.com" target="_blank" rel="noreferrer">
-          <img src={avatar5} alt="LeetCode" />
-        </a>
-        <a href="https://hackerrank.com" target="_blank" rel="noreferrer">
-          <img src={avatar6} alt="HackerRank" />
-        </a>
+      <div className="footer__clock">
+        {clock.time} || {clock.day}, {clock.date}
       </div>
 
-      <hr className="footer-divider" />
-      <div className="footer-bottom">
-        &copy; {new Date().getFullYear()}. Developed by Rajat Nagar<span>&#10084;&#65039;</span>
+      <hr className="footer__divider" />
+
+      <div className="footer__bottom">
+        <div className="footer__copyright">
+          &copy; {new Date().getFullYear()}. Developed by Rajat Nagar
+          <span>&#10084;&#65039;</span>
+        </div>
       </div>
     </footer>
   );

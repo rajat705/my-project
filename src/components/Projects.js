@@ -11,7 +11,7 @@ import heroImage6 from "../assets/project/rf.png";
 const Projects = () => {
   return (
     <div className="projects-section">
-      <h2 className="projects-heading">𐔌՞. PROJECTS .՞𐦯</h2>
+      <h2 className="projects-heading">PROJECTS</h2>
       <div className="projects-container">
         {/* Project 0 - Online College Admission Management*/}
         <div className="projects-card">
@@ -295,7 +295,7 @@ const Projects = () => {
           </div>
         </div>
         {/* Project 7 */}
-        <div className="projects-card">
+        {/* <div className="projects-card">
           <div className="projects-image">
             <img src={heroImage2} alt="Weather App Screenshot" />
           </div>
@@ -331,7 +331,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-
+ */}
         {/* Copy and paste the projects */}
       </div>
     </div>

@@ -3,6 +3,14 @@ import "../styles/Experience.css";
 
 const experiences = [
   {
+    title: "Full Stack Developer (MERN)",
+    company: "AccioJob",
+    logo: require("../assets/exp/acciojob_logo.jpeg"),
+    duration: "Fab 2024 - Present | Noida, UP, India",
+    description: `I have learned Full Stack Development using the MERN stack (MongoDB, Express.js, React.js, and Node.js) at AccioJob. During this training, I gained hands-on experience in building real-world web applications, understanding both frontend and backend development, REST APIs, database integration, and deployment practices. The program helped me strengthen my problem-solving skills and write clean, efficient, and scalable code.`,
+    skills: ["MongoDB", "Express.js", "ReactJS", "Node.js", "Git", "JavaScript", "HTML", "CSS", "MySQL", "Bootstrap"],
+  },
+  {
     title: "Product Developer",
     company: "Mark Barber Techno Trading LLP",
     logo: require("../assets/exp/markbarbertechnotradingllp.jpg"),
@@ -87,7 +95,7 @@ Contributed to multiple 3 ongoing projects, including ERP implementation, and th
 const Experience = () => {
   return (
     <section className="experience-section" id="exp">
-      <h2 className="experience-title">𐔌՞. EXPERIENCE .՞𐦯</h2>
+      <h2 className="experience-title">EXPERIENCE</h2>
       <div className="experience-container">
         {experiences.map((exp, index) => (
           <div className="experience-card" key={index}>
