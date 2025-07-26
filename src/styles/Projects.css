@@ -1,0 +1,150 @@
+.projects-section {
+  /* background-color: #0d0d0d;
+  padding: 50px 20px;
+  font-family: 'Arial', sans-serif; */
+  background-color: #111;
+  color: white;
+  background-image: url("../assets/about/about-bg.jpg");
+  padding: 0rem 0rem 2rem 0rem;
+  margin: 1rem 2rem;
+  border-radius: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  font-size: 0.9rem;
+}
+
+.projects-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.projects-card {
+  /* background: linear-gradient(to bottom right, #1e1e1e, #111111);  */
+  background: #2a2a2a;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 380px;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.projects-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+.projects-content {
+  text-align: center;
+}
+
+.highlight-yellow {
+  color: #fdbb2d;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.highlight-white {
+  color: white;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: left;
+  
+}
+
+/* .projects-description {
+  color: #ccc;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  list-style-type: disc;
+  text-align: left;
+  padding-left: 20px;
+} */
+
+.projects-description {
+  color: #ccc;
+  margin: 20px 0;
+  font-size: 1rem;
+  padding-left: 0;
+}
+
+.projects-description ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin: 0;
+}
+
+.projects-description li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  list-style-type: disc;
+  text-align: left;
+}
+
+
+
+.projects-features {
+  margin-top: 15px;
+}
+
+.feature-item {
+  background: #222;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.projects-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.join-button {
+  background-color: #fdbb2d;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.join-button:hover {
+  background-color: #e0a800;
+}
+
+@media (max-width: 768px) {
+  .projects-card {
+    max-width: 100%;
+  }
+
+  .projects-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .join-button {
+    width: 100%;
+  }
+}

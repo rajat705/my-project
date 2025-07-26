@@ -1,0 +1,144 @@
+.education-section {
+  /* background-color: #111; */
+  color: white;
+  background-image: url("../assets/about/about-bg.jpg");
+  padding: 0rem 0rem 2rem 0rem;
+  margin: 1rem 2rem;
+  border-radius: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  font-size: 0.9rem;
+}
+
+.education-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+/* @keyframes glowText {
+  from {
+    text-shadow: 0 0 5px #fdbb2d, 0 0 10px #fdbb2d;
+  }
+  to {
+    text-shadow: 0 0 20px #fdbb2d, 0 0 30px #fdbb2d;
+  }
+} */
+
+.education-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.full-card {
+  flex: 1 1 600px;
+  max-width: 800px;
+}
+
+.school-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.education-card {
+  background: #2a2a2a;
+  border-radius: 12px;
+  padding: 30px 25px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.education-text {
+  width: 100%;
+}
+
+/* Flex row for logo and text */
+.edu-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.edu-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.edu-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #ffae00;
+  font-weight: 700;
+}
+
+.edu-header .location {
+  margin-top: 5px;
+  font-size: 0.95rem;
+  color: rgb(249, 220, 168);
+  font-weight: 600;
+}
+
+.label {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.education-text ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #cfcfcf;
+}
+
+.education-text p,
+.education-text li {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #dddddd;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .education-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .full-card,
+  .school-column {
+    max-width: 100%;
+  }
+
+  .school-column {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .edu-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .edu-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .edu-logo {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,37 @@
+/* src/components/Connect.css */
+
+.connect-section {
+  /* background-color: #111; */
+  background-image: url("../assets/about/about-bg.jpg");
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.connect-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.logo-container img {
+  height: 60px;
+  max-width: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%) brightness(160%);
+}
+
+.logo-container img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
