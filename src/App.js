@@ -10,7 +10,7 @@ import Experience from "./components/Experience";
 import About from "./components/About";
 import Education from "./components/Education";
 
-// function App() {
+function App() {
   return (
     <div className="App">
       <Header />
