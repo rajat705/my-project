@@ -87,7 +87,7 @@ Contributed to multiple 3 ongoing projects, including ERP implementation, and th
 const Experience = () => {
   return (
     <section className="experience-section" id="exp">
-      <h2 className="experience-title">𐔌՞.EXPERIENCE.՞𐦯</h2>
+      <h2 className="experience-title">𐔌՞. EXPERIENCE .՞𐦯</h2>
       <div className="experience-container">
         {experiences.map((exp, index) => (
           <div className="experience-card" key={index}>
