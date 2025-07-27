@@ -19,12 +19,14 @@
   gap: 80px;             
 }
 
-.footer__contact,
-.footer__form {
+.footer__contact{
    padding-top: 0px;
   flex: 1 1 0;            /* Both grow/shrink equally */
   max-width: 500px;       /* Prevent either section from getting too wide */
 }
+
+
+
 
 .footer__contact {
   
@@ -33,13 +35,19 @@
   flex-direction: column;
 }
 
-.footer__contact h3,
-.footer__form h3 {
+.footer__contact h3 {
   font-size: 24px;
   font-weight: 600;
   color: #ffd700;
   margin-bottom: 15px;
 }
+
+/* .footer__form h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffd700;
+  margin-bottom: 15px;
+} */
 
 .footer__contact p {
   margin: 6px 0;
@@ -52,15 +60,15 @@
   color: #ffd700;
 }
 
-.footer__form {
+/* .footer__form {
   margin-top: -10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   max-width: 500px;
-}
+} */
 
-.footer__form input,
+/* .footer__form input,
 .footer__form textarea {
   padding: 10px;
   border: none;
@@ -69,9 +77,9 @@
   background: #1a1a1a;
   color: white;
   border: 1px solid #333;
-}
+} */
 
-.footer__form button {
+/* .footer__form button {
   background: #c7ac0e;
   border: none;
   padding: 10px;
@@ -80,7 +88,7 @@
   cursor: pointer;
   transition: background 0.3s;
 
-}
+} */
 
 .footer__link {
   color: white;
@@ -88,10 +96,10 @@
   text-decoration: none;
 }
 
-
+/* 
 .footer__form button:hover {
   background: #e0c200;
-}
+} */
 
 .footer__avatars {
   display: flex;
@@ -139,6 +147,68 @@
   font-size: 16px;
   color: #b18787;
 }
+
+.footer__form {
+  padding-top: 0px;
+  flex: 1 1 0;            
+  max-width: 500px;       
+}
+
+.footer__form {
+  background: transparent;
+  /* padding: 10px; */
+  border-radius: 10px;
+  color: #fff;
+}
+
+.footer__form h3 {
+  color: #ffd700; /* Yellow */
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.footer__form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__form input,
+.footer__form textarea {
+  background-color: #1a1a1a; /* Dark background */
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  color: #fff;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+  box-shadow: inset 0 0 0 1px #333;
+}
+
+.footer__form input::placeholder,
+.footer__form textarea::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.footer__form button {
+  background-color: #ffd700;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer__form button:hover {
+  background-color: #e6c200;
+  transform: scale(1.15);
+}
+
 
 /* RESPONSIVE: Stack sections on small screens */
 @media (max-width: 900px) {

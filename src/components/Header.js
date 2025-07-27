@@ -34,9 +34,9 @@ const Header = () => {
       {/* Navigation Links */}
       <nav className={`navbar__menu ${menuOpen ? "open" : ""}`}>
         <a href="#home" className="active" onClick={handleLinkClick}>Home</a>
+                <a href="#edu" onClick={handleLinkClick}>Education</a>
         <a href="#exp" onClick={handleLinkClick}>Experience</a>
         <a href="#skill" onClick={handleLinkClick}>Skills</a>
-        <a href="#edu" onClick={handleLinkClick}>Education</a>
         <a href="#project" onClick={handleLinkClick}>Projects</a>
         <a href="#certificates" onClick={handleLinkClick}>Certification</a>
         <a href="#contact" onClick={handleLinkClick}>Contact</a>
