@@ -82,6 +82,13 @@
 
 }
 
+.footer__link {
+  color: white;
+  /* display: none; */
+  text-decoration: none;
+}
+
+
 .footer__form button:hover {
   background: #e0c200;
 }

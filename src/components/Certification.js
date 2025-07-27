@@ -117,12 +117,12 @@ const certifications = [
     image: require("../assets/certificate/dsudemy.jpg"),
     link: "https://www.udemy.com/certificate/UC-777d2cf7-c067-4b4a-b42b-7ccaef9b3a53/",
   },
-  {
-    name: "Programming with C and C++",
-    issuer: "Internshala",
-    image: require("../assets/certificate/cppis.png"),
-    link: "https://drive.google.com/file/d/16ImhoiAwfWDYP0OyByjso7swcm5GA5PL/view",
-  },
+  // {
+  //   name: "Programming with C and C++",
+  //   issuer: "Internshala",
+  //   image: require("../assets/certificate/cppis.png"),
+  //   link: "https://drive.google.com/file/d/16ImhoiAwfWDYP0OyByjso7swcm5GA5PL/view",
+  // },
 ];
 
 const Certification = () => {

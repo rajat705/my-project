@@ -55,22 +55,40 @@ const Footer = () => {
         <div className="footer__contact">
           <h3>Contact me</h3>
           <p>
-            <FontAwesomeIcon icon={faPhone} /> +91 - 7878XX2922
+            <FontAwesomeIcon icon={faPhone} />{" "}
+            {/* <a href="tel:+917878772922" className="footer__link"> */}
+              +91 - 7878XX2922
+            {/* </a> */}
           </p>
           <p>
-            <FontAwesomeIcon icon={faEnvelope} /> rajatnagar7893@gmail.com
+            <FontAwesomeIcon icon={faEnvelope} />{" "}
+            <a href="mailto:rajatnagar7893@gmail.com" className="footer__link">
+              rajatnagar7893@gmail.com
+            </a>
           </p>
           <p>
             <FontAwesomeIcon icon={faMapMarkerAlt} /> Gurugram, Haryana, IN
           </p>
 
           <div className="footer__avatars">
-            <img src={avatar1} alt="LinkedIn" />
-            <img src={avatar2} alt="GitHub" />
-            <img src={avatar3} alt="Twitter" />
-            <img src={avatar4} alt="Instagram" />
-            <img src={avatar5} alt="LeetCode" />
-            <img src={avatar6} alt="HackerRank" />
+            <a href="https://www.linkedin.com/in/rajat-nagar" target="_blank" rel="noopener noreferrer">
+              <img src={avatar1} alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/rajat705" target="_blank" rel="noopener noreferrer">
+              <img src={avatar2} alt="GitHub" />
+            </a>
+            <a href="https://x.com/rajatnagarr" target="_blank" rel="noopener noreferrer">
+              <img src={avatar3} alt="Twitter" />
+            </a>
+            <a href="https://www.instagram.com/_rajatnagar_" target="_blank" rel="noopener noreferrer">
+              <img src={avatar4} alt="Instagram" />
+            </a>
+            <a href="https://leetcode.com/u/rajatnagar7893" target="_blank" rel="noopener noreferrer">
+              <img src={avatar5} alt="LeetCode" />
+            </a>
+            <a href="https://www.hackerrank.com/rajatnagar7893" target="_blank" rel="noopener noreferrer">
+              <img src={avatar6} alt="HackerRank" />
+            </a>
           </div>
         </div>
 
@@ -91,8 +109,7 @@ const Footer = () => {
 
       <div className="footer__bottom">
         <div className="footer__copyright">
-          &copy; {new Date().getFullYear()}. Developed by Rajat Nagar
-          <span>&#10084;&#65039;</span>
+          &copy; {new Date().getFullYear()}. Developed by Rajat Nagar <span>&#10084;&#65039;</span>
         </div>
       </div>
     </footer>
