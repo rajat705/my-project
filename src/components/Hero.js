@@ -20,7 +20,7 @@ const Hero = () => {
           optimizing performance, and delivering seamless user experiences.
         </p>
         <p className="hero__description">
-          I’m always eager to explore new technologies like Node.js, MongoDB,
+          I’m always eager to explore new technologies like Node.js, MongoDB, Cryptography,
           and blockchain, and love building meaningful products that solve
           real-world problems. Whether it’s developing complex UI components,
           integrating REST APIs, or managing application state, I bring a
