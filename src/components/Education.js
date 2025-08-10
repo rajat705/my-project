@@ -6,7 +6,7 @@ import logo2 from "../assets/education/mbvb.jpg";
 const Education = () => {
   return (
     <div className="education-section">
-      <h1 className="education-heading">EDUCATION</h1>
+      <h1 className="education-heading">EDUCATION &#127891;</h1>
 
       <div className="education-wrapper">
         {/* Main College Block */}

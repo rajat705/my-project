@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faMapMarkerAlt, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faMapMarkerAlt,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import "../styles/Footer.css";
 import avatar1 from "../assets/about/linkedinn.PNG";
 import avatar2 from "../assets/about/github.PNG";
@@ -14,12 +18,24 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 const Footer = () => {
   const [clock, setClock] = useState({ day: "", date: "", time: "" });
-  const [formData, setFormData] = useState({ name: "", email: "", feedback: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    feedback: "",
+  });
 
   useEffect(() => {
     const updateClock = () => {
       const now = new Date();
-      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
       const day = days[now.getDay()];
       const date = now.toLocaleDateString();
       const hours = now.getHours() % 12 || 12;
@@ -68,47 +84,120 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__top">
         <div className="footer__contact">
-          <h3>Contact Me</h3>
+          <h3>Contact Me &#128241;</h3>
           <p>
             <FontAwesomeIcon icon={faPhone} />{" "}
-            <a href="tel:+917878XX2922" className="footer__link">+91 - 7878XX2922</a>
+            <a href="tel:+917878XX2922" className="footer__link">
+              +91 - 7878XX2922
+            </a>
           </p>
           <p>
             <FontAwesomeIcon icon={faEnvelope} />{" "}
-            <a href="mailto:rajatnagar7893@gmail.com" className="footer__link">rajatnagar7893@gmail.com</a>
+            <a href="mailto:rajatnagar7893@gmail.com" className="footer__link">
+              rajatnagar7893@gmail.com
+            </a>
           </p>
-          <p><FontAwesomeIcon icon={faMapMarkerAlt} /> Gurugram, Haryana, IN</p>
+          <p>
+            <FontAwesomeIcon icon={faMapMarkerAlt} /> Gurugram, Haryana, IN
+          </p>
 
           <div className="footer__avatars">
-            <a href="https://www.linkedin.com/in/rajat-nagar" target="_blank" rel="noopener noreferrer"><img src={avatar1} alt="LinkedIn" /></a>
-            <a href="https://github.com/rajat705" target="_blank" rel="noopener noreferrer"><img src={avatar2} alt="GitHub" /></a>
-            <a href="https://x.com/rajatnagarr" target="_blank" rel="noopener noreferrer"><img src={avatar3} alt="Twitter" /></a>
-            <a href="https://www.instagram.com/_rajatnagar_" target="_blank" rel="noopener noreferrer"><img src={avatar4} alt="Instagram" /></a>
-            <a href="https://leetcode.com/u/rajatnagar7893" target="_blank" rel="noopener noreferrer"><img src={avatar5} alt="LeetCode" /></a>
-            <a href="https://www.hackerrank.com/rajatnagar7893" target="_blank" rel="noopener noreferrer"><img src={avatar6} alt="HackerRank" /></a>
+            <a
+              href="https://www.linkedin.com/in/rajat-nagar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={avatar1} alt="LinkedIn" />
+            </a>
+            <a
+              href="https://github.com/rajat705"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={avatar2} alt="GitHub" />
+            </a>
+            <a
+              href="https://x.com/rajatnagarr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={avatar3} alt="Twitter" />
+            </a>
+            <a
+              href="https://www.instagram.com/_rajatnagar_"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={avatar4} alt="Instagram" />
+            </a>
+            <a
+              href="https://leetcode.com/u/rajatnagar7893"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={avatar5} alt="LeetCode" />
+            </a>
+            <a
+              href="https://www.hackerrank.com/rajatnagar7893"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={avatar6} alt="HackerRank" />
+            </a>
           </div>
         </div>
 
         <div className="footer__form">
-          <h3>Send Feedback</h3>
+          <h3>Send Feedback &#128077;</h3>
           <form onSubmit={handleFormSubmit}>
-            <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleInputChange} required />
-            <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleInputChange} required />
-            <textarea name="feedback" rows="4" placeholder="Your Feedback" value={formData.feedback} onChange={handleInputChange} required />
-            <button type="submit">Send</button>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+            />
+            {/* <input
+              type="number"
+              name="number"
+              placeholder="Your Mobile Number"
+              value={formData.number}
+              onChange={handleInputChange}
+              required
+            /> */}
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+
+            <textarea
+              name="feedback"
+              rows="4"
+              placeholder="Your Feedback...!&#128525;"
+              value={formData.feedback}
+              onChange={handleInputChange}
+              required
+            />
+            <button type="submit">Send &#128640;</button>
           </form>
         </div>
       </div>
 
       <div className="footer__clock">
-        {clock.time} || {clock.day}, {clock.date}
+        {clock.time} &#128338; {clock.day}, {clock.date}
       </div>
 
       <hr className="footer__divider" />
 
       <div className="footer__bottom">
         <div className="footer__copyright">
-          &copy; {new Date().getFullYear()}. Developed by Rajat Nagar <span>&#10084;&#65039;</span>
+          &copy; 2024. {/* {new Date().getFullYear()}.  */} Developed by Rajat Nagar{" "}
+          <span>&#10084;&#65039;</span>
         </div>
       </div>
     </footer>

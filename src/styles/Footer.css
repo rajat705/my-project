@@ -165,6 +165,7 @@
   color: #ffd700; /* Yellow */
   font-size: 1.8rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .footer__form form {

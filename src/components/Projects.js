@@ -11,7 +11,7 @@ import heroImage6 from "../assets/project/rf.png";
 const Projects = () => {
   return (
     <div className="projects-section">
-      <h2 className="projects-heading">PROJECTS</h2>
+      <h2 className="projects-heading">PROJECTS &#128104;&#127995;&#8205;&#128187;</h2>
       <div className="projects-container">
         {/* Project 0 - Online College Admission Management*/}
         <div className="projects-card">

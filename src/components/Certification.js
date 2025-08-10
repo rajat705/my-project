@@ -128,7 +128,7 @@ const certifications = [
 const Certification = () => {
   return (
     <section className="certification">
-      <h2 className="certification-title">CERTIFICATIONS</h2>
+      <h2 className="certification-title">CERTIFICATIONS &#127941;</h2>
       <div className="certification-container">
         {certifications.map((cert, index) => (
           <div className="cert-card" key={index}>
