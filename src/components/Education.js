@@ -21,7 +21,7 @@ const Education = () => {
             </div>
             <p><span className="label">Degree:</span> Bachelor of Technology (B.Tech)</p>
             <p><span className="label">Stream:</span> Computer Science and Engineering</p>
-            <p><span className="label">CGPA:</span> 7.47/10</p>
+            <p><span className="label">Grade:</span>A+</p>
             <p><span className="label">Year of Graduation:</span> 2019 - 2023</p>
             <p className="label">Relevant Courseworks:</p>
             <ul>
