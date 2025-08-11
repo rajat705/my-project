@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="hero__content">
         <p className="hero__about-label">ABOUT</p>
         <h1 className="hero__name">RAJAT NAGAR...𓂃&#128395;&#65039;</h1>
-        <span className="hero__tagline">Full Stack Developer</span>
+        <span className="hero__tagline">Software Developer</span>
         <p className="hero__description">
           I’m a passionate <b> Full Stack Developer </b> with hands-on
           experience building responsive, user-centric web applications using
